@@ -51,11 +51,11 @@ Read the Wikipedia page on the [arithmetic of the Rationals](http://en.wikipedia
 7. Inversion / negation
 8. Reciprocation
 
-Make sure you understand the rules.  Use examples on pen and paper and make sure you can, say, add two rational numbers by hand.
+Make sure you understand the rules.  Use examples on pen and paper and make sure you can, say, add two rational numbers by hand.  If it helps you, you can write this as pseudocode at the top of your ```rational_number.rb``` file.
 
 ###Release 1 : Fill in the RationalNumber class
 
-You've been provided with a skeleton `RationalNumber` class with methods to fill in.  Assume the input is always another `RationalNumber` instance.  Ruby has a built-in `Rational` class; don't use it!
+You've been provided with a skeleton `RationalNumber` class with methods to fill in.  Assume the input is always another `RationalNumber` instance.  Ruby has a built-in `Rational` class; don't use it!  Do, on the other hand, write tests to check your output.  If you need help on any of the math, just ask!
 
 The point of this challenge is to see how something like Ruby's `Rational` might be implemented on the inside, and also to see how object-oriented design can implement concrete and abstract systems alike.
  
