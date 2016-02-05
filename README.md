@@ -63,11 +63,7 @@ We have some empty method definitions in the provided `RationalNumber` class.  N
 
  
 
-<!-- ##Optimize Your Learning  -->
 
-##Resources
-
-* [arithmetic of the Rationals](http://en.wikipedia.org/wiki/Rational_number#Arithmetic)
 
 [khan academy rational numbers]: https://www.khanacademy.org/math/pre-algebra/order-of-operations/rational-irrational-numbers/v/introduction-to-rational-and-irrational-numbers
 [maths is fun rational numbers]: http://www.mathsisfun.com/rational-numbers.html
