@@ -57,11 +57,11 @@ And, because these operators are methods, each class can define its own operator
 *Figure 3*.  Calling operator methods with the same name on different types of object.
 
 
-##Releases
+## Releases
+### Release 0: Write Down the Rules of Rational Arithmetic
+We're going to develop a `RationalNumber` class with behaviors like addition (`+`), subtraction (`-`), etc.  A couple behaviors have been written and tested for us (e.g., calculating a reciprocal.).  Empty method definitions have been written for the methods we need to develop. 
 
-###Release 0 : Write down the rules of rational arithmetic
-
-Read the Wikipedia page on the [arithmetic of the Rationals](http://en.wikipedia.org/wiki/Rational_number#Arithmetic).  We're going to implement the following operations:
+We're going to implement the following operations:
 
 1. Addition
 2. Subtraction
@@ -70,11 +70,12 @@ Read the Wikipedia page on the [arithmetic of the Rationals](http://en.wikipedia
 5. Equality
 6. Exponentiation
 7. Inversion / negation
-8. Reciprocation
+8. Reciprocation (*completed*)
 
-Make sure you understand the rules.  Use examples on pen and paper and make sure you can, say, add two rational numbers by hand.  If it helps you, you can write this as pseudocode at the top of your ```rational_number.rb``` file.
+Read the Wikipedia page on the [arithmetic of rational numbers][wikipedia rational numbers arithmetic]; some additional information is provided as comments in the file `rational_number.rb`.  Ensure that we understand how to make each of the calculations.  Use pen and paper to demonstrate that we can make each of them (e.g., add two rational numbers).  Then translate the calculations to pseudocode.
 
-###Release 1 : Fill in the RationalNumber class
+
+### Release 1: Fill in the RationalNumber class
 
 You've been provided with a skeleton `RationalNumber` class with methods to fill in.  Assume the input is always another `RationalNumber` instance.  Ruby has a built-in `Rational` class; don't use it!  Do, on the other hand, write tests to check your output.  If you need help on any of the math, just ask!
 
