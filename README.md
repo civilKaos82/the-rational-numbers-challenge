@@ -1,10 +1,5 @@
 # The Rational Numbers 
  
-##Learning Competencies 
-
-* Use Pseudocode effectively to model problem-solving
-* Model a simple real-world system in Ruby code
-* Identify and implement classes based on real world requirements
 
 ##Summary 
 
