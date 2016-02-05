@@ -61,10 +61,15 @@ We have some empty method definitions in the provided `RationalNumber` class.  N
 
 *Note:*  Ruby has a built-in `Rational` class; don't use it.
 
- 
+
+## Conclusion
+It's important to understand that many of Ruby's operators are methods and that each class can have its own implementation.  As we use different libraries and gems, some of them will define their own operators.  For example, we've seen Ruby's `CSV` library, which defines a shovel operator, [`<<`][csv shovel documentation], for writing to a file.  Later at Dev Bootcamp, we'll work with BCrypt and a custom equality operator, [`==`][bcrypt password equality operator].
+
+When we write our own custom operator methods, we want to be mindful of following conventions.  Developers will have general expectations for how a `+`, `-`, `<<`, or `==` will behave, and we don't want to surprise them with unexpected behaviors.
 
 
-
+[bcrypt password equality operator]: https://github.com/codahale/bcrypt-ruby/blob/master/lib/bcrypt/password.rb#L65
+[csv shovel documentation]: http://ruby-doc.org/stdlib-2.1.0/libdoc/csv/rdoc/CSV.html#method-i-3C-3C
 [khan academy rational numbers]: https://www.khanacademy.org/math/pre-algebra/order-of-operations/rational-irrational-numbers/v/introduction-to-rational-and-irrational-numbers
 [maths is fun rational numbers]: http://www.mathsisfun.com/rational-numbers.html
 [programming ruby operator expressions]: http://phrogz.net/ProgrammingRuby/frameset.html?content=http%3A//phrogz.net/ProgrammingRuby/language.html%23operatorexpressions
