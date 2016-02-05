@@ -1,35 +1,61 @@
 # Rational Numbers:  Operators as Methods
  
 
-##Summary 
+## Summary 
+Ruby provides us with different classes for representing numbers.  `Integer` and `Float`, for example.  In this challenge, we're going to build our own class to represent [rational numbers][wikipedia rational numbers].  To do so, we'll need to understand how to add, subtract, etc. rational numbers.  But, in doing so, we're also going to learn how to implement operators like `+`, `-`, and `==` in our custom classes.
 
- We're going to model a system whose rules you've known for years and years: the arithmetic of the rational numbers.
 
-As a quick refresher, a rational number is any number which can be expressed as the ratio of two integers.  [Read the Wikipedia page on the Rationals.](http://en.wikipedia.org/wiki/Rational_number)
+### Rational Numbers
+A rational number is any number which can be expressed as a fraction with integers for the numerator and denominator.  For example, `3` is a rational number because it can be expressed as `3/1`, and `1.25` is rational because it can be expressed as `5/4`.  [Maths is Fun][maths is fun rational numbers] and [Khan Academy][khan academy rational numbers] each provide an introduction to rational numbers.  The wikipedia article on rational numbers will provide a description of [how to perform arithmetic with rational numbers][wikipedia rational numbers arithmetic].
 
-We're going to learn how to implement a more abstract system in code, but gain something in the process.  By having our own "rational number class" we can perform exact arithmetic without the rounding errors that come from floating point arithmetic.
 
-Think back to your calculator-using days when you'd type something like
+### Syntactic Sugar
+Ruby is designed to be programmer friendly.  It provides *syntactic sugar* to improve the experience of writing code.  In other words, Ruby sometimes provides additional programmer-friendly ways of writing code.  The friendlier approach might feel more natural or read better.  We've been taking advantage of Ruby's syntactic sugar, but perhaps we haven't recognized it.  Figure 1 shows some examples where we commonly see this; the syntactic sugar provides a different way of calling the methods `Person#first_name=`, `Array#<<`, and `Hash#[]=`.
 
-```text
-1/3 + 1/3 + 1/3
-```
-
-and get back
-
-```text
-1.00000000000001
-```
-
-We'll write code that will work like this:
 
 ```ruby
-num1 = RationalNumber.new(2,3)
-num2 = RationalNumber.new(1,3)
-
-# true
-num1 + num2 == RationalNumber.new(1,1)
+# Syntactic Sugar                #  Standard Ruby Syntax
+                                 #
+person = Person.new              #
+person.first_name = "Connie"     #  person.first_name=("Connie")
+                                 #
+numbers = [43, 99, 17]           #
+numbers << 4                     #  numbers.<<(25)
+                                 #
+menu_prices = Hash.new           #
+menu_prices[:hamburger] = 3.49   #  some_hash.[]=(:hamburger, 3.49) 
 ```
+*Figure 1*.  Examples of Ruby's syntactic sugar: a setter method, array indexing, and key-value hash assigning.
+
+
+### Operators as Methods
+We see the same pattern with many of Ruby's operators:  `+`, `-`, `>`, `==`.  When we use Ruby's operators, the syntax often hides the fact that [many of them are actually methods][programming ruby operator expressions].  When we work with integers we rarely use the standard Ruby method-calling syntax; the sugary syntax is friendlier (see Figure 2).
+
+```ruby
+# Syntactic Sugar                #  Standard Ruby Syntax
+                                 #
+1 + 2                            #  1.+(2)
+2 ** 3                           #  2.**(3)
+4 == 4                           #  4.==(4)
+```
+*Figure 2*.  Using operator methods with integers.
+
+
+And, because these operators are methods, each class can define its own operators.  For example, the classes `Fixnum`, `String`, `Array`, and others implement their own versions these operators (see Figure 3).  We can define these operator methods in our own custom classes, too, which is what we will be doing in this challenge.
+
+```ruby
+# Syntactic Sugar                #  Standard Ruby Syntax
+                                 #
+1 + 2                            #  1.+(2)
+"add " + "strings"               #  "add ".+("strings")
+[:a, :b] + [:c, :d]              #  [:a, :b].+([:c, :d])
+                                 #
+1 == 2                           #  1.==(2)
+"compare" == "strings"           #  "compare".==("strings")
+[:a, :b] == [:c, :d]             #  [:a, :b].==([:c, :d])
+```
+*Figure 3*.  Calling operator methods with the same name on different types of object.
+
 
 ##Releases
 
@@ -60,3 +86,10 @@ The point of this challenge is to see how something like Ruby's `Rational` might
 ##Resources
 
 * [arithmetic of the Rationals](http://en.wikipedia.org/wiki/Rational_number#Arithmetic)
+
+[khan academy rational numbers]: https://www.khanacademy.org/math/pre-algebra/order-of-operations/rational-irrational-numbers/v/introduction-to-rational-and-irrational-numbers
+[maths is fun rational numbers]: http://www.mathsisfun.com/rational-numbers.html
+[programming ruby operator expressions]: http://phrogz.net/ProgrammingRuby/frameset.html?content=http%3A//phrogz.net/ProgrammingRuby/language.html%23operatorexpressions
+[wikipedia rational numbers]: http://en.wikipedia.org/wiki/Rational_number
+[wikipedia rational numbers arithmetic]: https://en.wikipedia.org/wiki/Rational_number#Arithmetic
+
