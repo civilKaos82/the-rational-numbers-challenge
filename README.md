@@ -1,4 +1,4 @@
-# The Rational Numbers 
+# Rational Numbers:  Operators as Methods
  
 
 ##Summary 
