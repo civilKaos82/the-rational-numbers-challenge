@@ -20,7 +20,7 @@ person = Person.new              #
 person.first_name = "Connie"     #  person.first_name=("Connie")
                                  #
 numbers = [43, 99, 17]           #
-numbers << 4                     #  numbers.<<(25)
+numbers << 25                     #  numbers.<<(25)
                                  #
 menu_prices = Hash.new           #
 menu_prices[:hamburger] = 3.49   #  menu_prices.[]=(:hamburger, 3.49) 
