@@ -72,14 +72,14 @@ We're going to implement the following operations:
 7. Inversion / negation
 8. Reciprocation (*completed*)
 
-Read the Wikipedia page on the [arithmetic of rational numbers][wikipedia rational numbers arithmetic]; some additional information is provided as comments in the file `rational_number.rb`.  Ensure that we understand how to make each of the calculations.  Use pen and paper to demonstrate that we can make each of them (e.g., add two rational numbers).  Then translate the calculations to pseudocode.
+Read the Wikipedia page on the [arithmetic of rational numbers][wikipedia rational numbers arithmetic]; some additional information is provided as comments in the file `rational_number.rb`.  Ensure that we understand how to make each of the calculations.  Use pen and paper to demonstrate that we can make each of them (e.g., add two rational numbers).  Then translate the calculations to pseudocode.  If we need help on any of the math, just ask!
 
 
-### Release 1: Fill in the RationalNumber class
+### Release 1: Develop the `RationalNumber` Class
+We have some empty method definitions in the provided `RationalNumber` class.  Now that we know how to make each of the calculations, for each of the empty methods we can write tests and then complete the method definition.  Where a method accepts an argument, assume the input is another instance of our `RationalNumber` class (except with exponentiation where an integer is expected).
 
-You've been provided with a skeleton `RationalNumber` class with methods to fill in.  Assume the input is always another `RationalNumber` instance.  Ruby has a built-in `Rational` class; don't use it!  Do, on the other hand, write tests to check your output.  If you need help on any of the math, just ask!
+*Note:*  Ruby has a built-in `Rational` class; don't use it.
 
-The point of this challenge is to see how something like Ruby's `Rational` might be implemented on the inside, and also to see how object-oriented design can implement concrete and abstract systems alike.
  
 
 <!-- ##Optimize Your Learning  -->
