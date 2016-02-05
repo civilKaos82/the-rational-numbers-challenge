@@ -9,27 +9,8 @@ Ruby provides us with different classes for representing numbers.  `Integer` and
 A rational number is any number which can be expressed as a fraction with integers for the numerator and denominator.  For example, `3` is a rational number because it can be expressed as `3/1`, and `1.25` is rational because it can be expressed as `5/4`.  [Maths is Fun][maths is fun rational numbers] and [Khan Academy][khan academy rational numbers] each provide an introduction to rational numbers.  The wikipedia article on rational numbers will provide a description of [how to perform arithmetic with rational numbers][wikipedia rational numbers arithmetic].
 
 
-### Syntactic Sugar
-Ruby is designed to be programmer friendly.  It provides *syntactic sugar* to improve the experience of writing code.  In other words, Ruby sometimes provides programmer-friendly alternative syntax for writing code.  The friendlier syntax might feel more natural or read better.  We've been taking advantage of Ruby's syntactic sugar, but perhaps we haven't recognized it.  Figure 1 shows some examples where we commonly see this; the syntactic sugar provides an alternative way of calling the methods `Person#first_name=`, `Array#<<`, and `Hash#[]=`.
-
-
-```ruby
-# Syntactic Sugar                #  Standard Ruby Syntax
-                                 #
-person = Person.new              #
-person.first_name = "Connie"     #  person.first_name=("Connie")
-                                 #
-numbers = [43, 99, 17]           #
-numbers << 25                     #  numbers.<<(25)
-                                 #
-menu_prices = Hash.new           #
-menu_prices[:hamburger] = 3.49   #  menu_prices.[]=(:hamburger, 3.49) 
-```
-*Figure 1*.  Examples of Ruby's syntactic sugar: a setter method, array indexing, and key-value hash assigning.
-
-
 ### Operators as Methods
-We see the same pattern with many of Ruby's operators:  `+`, `-`, `>`, `==`.  When we use Ruby's operators, the syntax often hides the fact that [many of them are actually methods][programming ruby operator expressions].  When we work with integers we rarely use the standard Ruby method-calling syntax; the sugary syntax is friendlier (see Figure 2).
+Ruby is designed to be programmer friendly.  It provides *syntactic sugar* to improve the experience of writing code:  Ruby provides some programmer-friendly alternative syntax in certain situations.  The friendlier syntax might feel more natural or be more readable.  We've been taking advantage of Ruby's syntactic sugar, but perhaps we haven't recognized it.  For example, when we work with numbers we rarely use the standard Ruby method-calling syntax; the sugary syntax is friendlier (see Figure 2).
 
 ```ruby
 # Syntactic Sugar                #  Standard Ruby Syntax
@@ -38,10 +19,10 @@ We see the same pattern with many of Ruby's operators:  `+`, `-`, `>`, `==`.  Wh
 2 ** 3                           #  2.**(3)
 4 == 4                           #  4.==(4)
 ```
-*Figure 2*.  Using operator methods with integers.
+*Figure 2*.  Syntactic sugar for `Fixnum` methods.
 
 
-And, because these operators are methods, each class can define its own operators.  For example, the classes `Fixnum`, `String`, `Array`, and others implement their own versions these operators (see Figure 3).  We can define these operator methods in our own custom classes, too, which is what we'll be doing in this challenge.
+When we use Ruby's operators like `+`, `-`, `>`, `==`, etc. the syntax often hides the fact that [many of them are actually methods][programming ruby operator expressions].  And, because these operators are methods, each class can define its own operators.  For example, the classes `Fixnum`, `String`, `Array`, and others implement their own versions these operators (see Figure 3).  We can define these operator methods in our own custom classes, too, which is what we'll be doing in this challenge.
 
 ```ruby
 # Syntactic Sugar                #  Standard Ruby Syntax
