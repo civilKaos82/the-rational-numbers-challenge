@@ -10,7 +10,7 @@ A rational number is any number which can be expressed as a fraction with intege
 
 
 ### Syntactic Sugar
-Ruby is designed to be programmer friendly.  It provides *syntactic sugar* to improve the experience of writing code.  In other words, Ruby sometimes provides additional programmer-friendly ways of writing code.  The friendlier approach might feel more natural or read better.  We've been taking advantage of Ruby's syntactic sugar, but perhaps we haven't recognized it.  Figure 1 shows some examples where we commonly see this; the syntactic sugar provides a different way of calling the methods `Person#first_name=`, `Array#<<`, and `Hash#[]=`.
+Ruby is designed to be programmer friendly.  It provides *syntactic sugar* to improve the experience of writing code.  In other words, Ruby sometimes provides programmer-friendly alternative syntax for writing code.  The friendlier syntax might feel more natural or read better.  We've been taking advantage of Ruby's syntactic sugar, but perhaps we haven't recognized it.  Figure 1 shows some examples where we commonly see this; the syntactic sugar provides an alternative way of calling the methods `Person#first_name=`, `Array#<<`, and `Hash#[]=`.
 
 
 ```ruby
@@ -23,7 +23,7 @@ numbers = [43, 99, 17]           #
 numbers << 4                     #  numbers.<<(25)
                                  #
 menu_prices = Hash.new           #
-menu_prices[:hamburger] = 3.49   #  some_hash.[]=(:hamburger, 3.49) 
+menu_prices[:hamburger] = 3.49   #  menu_prices.[]=(:hamburger, 3.49) 
 ```
 *Figure 1*.  Examples of Ruby's syntactic sugar: a setter method, array indexing, and key-value hash assigning.
 
@@ -41,7 +41,7 @@ We see the same pattern with many of Ruby's operators:  `+`, `-`, `>`, `==`.  Wh
 *Figure 2*.  Using operator methods with integers.
 
 
-And, because these operators are methods, each class can define its own operators.  For example, the classes `Fixnum`, `String`, `Array`, and others implement their own versions these operators (see Figure 3).  We can define these operator methods in our own custom classes, too, which is what we will be doing in this challenge.
+And, because these operators are methods, each class can define its own operators.  For example, the classes `Fixnum`, `String`, `Array`, and others implement their own versions these operators (see Figure 3).  We can define these operator methods in our own custom classes, too, which is what we'll be doing in this challenge.
 
 ```ruby
 # Syntactic Sugar                #  Standard Ruby Syntax
