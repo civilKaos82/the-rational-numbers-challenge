@@ -1,7 +1,7 @@
 # Rational Numbers:  Operators as Methods
- 
 
-## Summary 
+
+## Summary
 Ruby provides us with different classes for representing numbers.  `Integer` and `Float`, for example.  In this challenge, we're going to build our own class to represent [rational numbers][wikipedia rational numbers].  To do so, we'll need to understand how to add, subtract, etc. rational numbers.  But, in doing so, we're also going to learn how to implement operators like `+`, `-`, and `==` in our custom classes.
 
 
@@ -22,7 +22,7 @@ Ruby is designed to be programmer friendly.  It provides *syntactic sugar* to im
 *Figure 2*.  Syntactic sugar for `Fixnum` methods.
 
 
-When we use Ruby's operators like `+`, `-`, `>`, `==`, etc. the syntax often hides the fact that [many of them are actually methods][programming ruby operator expressions].  And, because these operators are methods, each class can define its own operators.  For example, the classes `Fixnum`, `String`, `Array`, and others implement their own versions these operators (see Figure 3).  We can define these operator methods in our own custom classes, too, which is what we'll be doing in this challenge.
+When we use Ruby's operators like `+`, `-`, `>`, `==`, etc. the syntax often hides the fact that [many of them are actually methods][programming ruby operator expressions].  And, because these operators are methods, each class can define its own operators.  For example, the classes `Fixnum`, `String`, `Array`, and others implement their own versions of these operators (see Figure 3).  We can define these operator methods in our own custom classes, too, which is what we'll be doing in this challenge.
 
 ```ruby
 # Syntactic Sugar                #  Standard Ruby Syntax
@@ -40,7 +40,7 @@ When we use Ruby's operators like `+`, `-`, `>`, `==`, etc. the syntax often hid
 
 ## Releases
 ### Release 0: Write Down the Rules of Rational Arithmetic
-We're going to develop a `RationalNumber` class with behaviors like addition (`+`), subtraction (`-`), etc.  A couple behaviors have been written and tested for us (e.g., calculating a reciprocal.).  Empty method definitions have been written for the methods we need to develop. 
+We're going to develop a `RationalNumber` class with behaviors like addition (`+`), subtraction (`-`), etc.  A couple behaviors have been written and tested for us (e.g., calculating a reciprocal.).  Empty method definitions have been written for the methods we need to develop.
 
 We're going to implement the following operations:
 
